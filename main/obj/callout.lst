@@ -1,0 +1,46 @@
+
+C:\Users\rosschisholm\Documents\Work\Sonar Launchpad\main\obj\callout.o:     file format elf32-littlearm
+C:\Users\rosschisholm\Documents\Work\Sonar Launchpad\main\obj\callout.o
+
+
+Disassembly of section .text.Callout_Authentication:
+
+00000000 <Callout_Authentication>:
+Callout_Authentication():
+C:\Users\rosschisholm\Documents\Work\Sonar Launchpad\main/callout.c:24
+// Call routines that are hidden in the bootloader
+// ____________________________________________________________________________
+//
+
+u16 Callout_Authentication(u32 Challenge)
+{
+   0:	b508      	push	{r3, lr}
+C:\Users\rosschisholm\Documents\Work\Sonar Launchpad\main/callout.c:26
+    tAuthenticationFunc Authentication;
+    u32 A = peek(0x08000138);   // address of function
+   2:	4b02      	ldr	r3, [pc, #8]	; (c <Callout_Authentication+0xc>)
+   4:	681b      	ldr	r3, [r3, #0]
+C:\Users\rosschisholm\Documents\Work\Sonar Launchpad\main/callout.c:28
+    Authentication = (void *)(A);
+    return Authentication(Challenge);
+   6:	4798      	blx	r3
+C:\Users\rosschisholm\Documents\Work\Sonar Launchpad\main/callout.c:29
+}
+   8:	bd08      	pop	{r3, pc}
+   a:	bf00      	nop
+   c:	08000138 	.word	0x08000138
+
+Disassembly of section .text.Authentication_DummyHandler:
+
+00000000 <Authentication_DummyHandler>:
+Authentication_DummyHandler():
+C:\Users\rosschisholm\Documents\Work\Sonar Launchpad\main/callout.c:45
+//
+
+u16 Authentication_DummyHandler(u32 Challenge)
+{
+    return 0;
+}
+   0:	f04f 0000 	mov.w	r0, #0
+   4:	4770      	bx	lr
+   6:	bf00      	nop

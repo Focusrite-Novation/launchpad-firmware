@@ -1,0 +1,48 @@
+
+C:\Users\rosschisholm\Documents\Work\Sonar Launchpad\main\obj\startup.o:     file format elf32-littlearm
+C:\Users\rosschisholm\Documents\Work\Sonar Launchpad\main\obj\startup.o
+
+
+Disassembly of section .text.Reset_Handler:
+
+00000000 <Reset_Handler>:
+Reset_Handler():
+   0:	480c      	ldr	r0, [pc, #48]	; (34 <FillZeroDone+0xe>)
+   2:	490d      	ldr	r1, [pc, #52]	; (38 <FillZeroDone+0x12>)
+   4:	4a0d      	ldr	r2, [pc, #52]	; (3c <FillZeroDone+0x16>)
+   6:	f092 0f00 	teq	r2, #0
+   a:	d003      	beq.n	14 <CopyDataDone>
+
+0000000c <CopyData>:
+CopyData():
+   c:	3a04      	subs	r2, #4
+   e:	5883      	ldr	r3, [r0, r2]
+  10:	508b      	str	r3, [r1, r2]
+  12:	d1fb      	bne.n	c <CopyData>
+
+00000014 <CopyDataDone>:
+CopyDataDone():
+  14:	480a      	ldr	r0, [pc, #40]	; (40 <FillZeroDone+0x1a>)
+  16:	490b      	ldr	r1, [pc, #44]	; (44 <FillZeroDone+0x1e>)
+  18:	f04f 0200 	mov.w	r2, #0
+
+0000001c <FillZero>:
+FillZero():
+  1c:	4288      	cmp	r0, r1
+  1e:	d002      	beq.n	26 <FillZeroDone>
+  20:	f840 2b04 	str.w	r2, [r0], #4
+  24:	e7fa      	b.n	1c <FillZero>
+
+00000026 <FillZeroDone>:
+FillZeroDone():
+  26:	f04f 0000 	mov.w	r0, #0
+  2a:	f8d0 d000 	ldr.w	sp, [r0]
+  2e:	f7ff fffe 	bl	0 <main>
+  32:	4770      	bx	lr
+	...
+
+Disassembly of section .text.Default_Handler:
+
+00000000 <ADC1_2_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	e7fe      	b.n	0 <ADC1_2_IRQHandler>
