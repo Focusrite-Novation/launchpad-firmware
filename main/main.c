@@ -69,6 +69,8 @@ int main()
     usb_init();
     usb_enable();
 
+    sonar_demo(); // defined in sonar. c - gives examples of functions within Launchpad
+
     while (1)
     {
         usb_poll();

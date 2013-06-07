@@ -35,6 +35,7 @@
 //////////////////////////////////////////////////////////////////////////
 
 extern void uifu_200hz(void);
+extern void sonar_demo(void);
 
 extern struct sFifo Event;
 
