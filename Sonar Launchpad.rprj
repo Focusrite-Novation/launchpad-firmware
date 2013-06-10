@@ -1,4 +1,4 @@
 
-<Project Header="Project 'Sonar Launchpad'" Path=".\Sonar Launchpad.rprj" Project="Yes" OutputFile="" sate="96" ActiveApp="Sonar Launchpad" >
-	<ApplicationBuild Header="Sonar Launchpad" Extern=".\Sonar Launchpad.rapp" Path=".\Sonar Launchpad.rapp" OutputFile=".\main\obj\Sonar Launchpad.elf" sate="96" Config="Debug with RLink" />
+<Project Header="Project 'Sonar Launchpad'" Path=".\Sonar Launchpad.rprj" Project="Yes" OutputFile="" sate="98" ActiveApp="Sonar Launchpad" >
+	<ApplicationBuild Header="Sonar Launchpad" Extern=".\Sonar Launchpad.rapp" Path=".\Sonar Launchpad.rapp" OutputFile=".\main\obj\Sonar Launchpad.elf" sate="96" Config="Standard" />
 </Project>
