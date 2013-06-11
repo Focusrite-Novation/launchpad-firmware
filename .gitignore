@@ -1,0 +1,13 @@
+Sonar Launchpad.ctx
+Sonar Launchpad.dbi
+Sonar Launchpad.hex
+Sonar Launchpad.syx
+Sonar Launchpad.xdb
+dobuild.js
+intbuild.js
+main/obj/BuildLog.html
+main/obj/Sonar Launchpad.elf
+main/obj/Sonar Launchpad.elf.ld
+main/obj/Sonar Launchpad.map
+*.lst
+*.o
