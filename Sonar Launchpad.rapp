@@ -1,12 +1,12 @@
 
-<ApplicationBuild Header="Sonar Launchpad" Extern=".\Sonar Launchpad.rapp" Path=".\Sonar Launchpad.rapp" OutputFile=".\main\obj\Sonar Launchpad.elf" sate="96" Config="Standard" >
+<ApplicationBuild Header="Sonar Launchpad" Extern=".\Sonar Launchpad.rapp" Path=".\Sonar Launchpad.rapp" OutputFile=".\main\obj\Sonar Launchpad.elf" sate="98" Config="Debug with RLink" >
 	<Group Header="common" Marker="-1" OutputFile="" sate="0" >
 		<NodeObj Path=".\main\obj\glob_textscroll.o" Header="glob_textscroll.o" Marker="-1" OutputFile=".\main\obj\glob_textscroll.o" sate="0" />
 		<NodeObj Path=".\main\obj\glob_font.o" Header="glob_font.o" Marker="-1" OutputFile=".\main\obj\glob_font.o" sate="0" />
 		<NodeObj Path=".\main\obj\glob_init.o" Header="glob_init.o" Marker="-1" OutputFile=".\main\obj\glob_init.o" sate="0" />
 		<NodeObj Path=".\main\obj\glob_scrollmap.o" Header="glob_scrollmap.o" Marker="-1" OutputFile=".\main\obj\glob_scrollmap.o" sate="0" />
 		<NodeObj Path=".\main\obj\glob_surfacemap.o" Header="glob_surfacemap.o" Marker="-1" OutputFile=".\main\obj\glob_surfacemap.o" sate="0" />
-									
+												
 	</Group>
 	<NodeC Path=".\main\main.c" Header="main.c" Marker="-1" OutputFile=".\main\obj\main.o" sate="0" />
 	<NodeC Path=".\main\midi.c" Header="midi.c" Marker="-1" OutputFile=".\main\obj\midi.o" sate="0" />
@@ -19,67 +19,67 @@
 	<NodeObj Path=".\cortex\cxm3_usb.o" Header="cxm3_usb.o" Marker="-1" OutputFile=".\cortex\cxm3_usb.o" sate="0" />
 	<Configs>
 		<Config Header="Debug with RLink" />
-									
+												
 	</Configs>
 	<Options>
 		<Config Header="Standard" >
 			<Set Header="ApplicationBuild" >
 				<Section Header="General" >
 					<Property Header="TargetFamily" Value="ARM" />
-																																											
+																																																				
 				</Section>
 				<Section Header="Directories" >
 					<Property Header="OutDir" Value="$(ApplicationDir)\main\obj" Removable="1" />
 					<Property Header="ListDir" Value="$(ApplicationDir)\main\obj" Removable="1" />
 					<Property Header="IncDir" Value=".;$(RkitLib)\ARM\include;main;common;cortex" Removable="1" />
-																																		
+																																											
 				</Section>
-																										
+																																	
 			</Set>
 			<Set Header="Target" >
 				<Section Header="ProcessorARM" >
 					<Property Header="Processor" Value="STM32F103C8T6" />
-																																											
+																																																				
 				</Section>
 				<Section Header="ToolSetARM" >
 					<Property Header="BuildToolSetARM" Value="ARM\GNU.config" />
-																																											
+																																																				
 				</Section>
-																																	
+																																								
 			</Set>
 			<Set Header="LD" >
 				<Section Header="Startup" >
 					<Property Header="DEFAULTSTARTUP" Value="No" Removable="1" />
 					<Property Header="File" Value="startup.o" Removable="1" />
-																																		
+																																											
 				</Section>
 				<Section Header="Scripts" >
 					<Property Header="SCRIPTFILES" Value="No" Removable="1" />
 					<Property Header="File" Value="main\linker.ld" Removable="1" />
-																																		
+																																											
 				</Section>
-																										
+																																	
 			</Set>
 			<Set Header="GCC" >
 				<Section Header="More" >
 					<Property Header="More" Value="-std=c99" />
-																																		
+																																											
 				</Section>
-																										
+																																	
 			</Set>
-															
+																				
 		</Config>
 		<Config Header="Debug with RLink" >
 			<Set Header="LD" >
 				<Section Header="Scripts" >
 					<Property Header="File" Value="main\linker_debug.ld" Removable="1" />
-																																		
+																																											
 				</Section>
-																										
+																																	
 			</Set>
-															
+																				
 		</Config>
-									
+												
 	</Options>
 	<NodeObj Path=".\main\obj\startup.o" Header="startup.o" Marker="-1" OutputFile=".\main\obj\startup.o" sate="0" />
 	<NodeObj Path=".\main\obj\deviceid.o" Header="deviceid.o" Marker="-1" OutputFile=".\main\obj\deviceid.o" sate="0" />

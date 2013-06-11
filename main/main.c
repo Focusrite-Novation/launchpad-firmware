@@ -69,8 +69,6 @@ int main()
     usb_init();
     usb_enable();
 
-    sonar_demo(); // defined in sonar. c - gives examples of functions within Launchpad
-
     while (1)
     {
         usb_poll();
@@ -96,6 +94,8 @@ int main()
         {
             // 20Hz
             EventFlags = (EventFlags & ~EVENT_20HZ);
+        
+            sonar_demo();
         }
 
         if (EventFlags & EVENT_FLASH) // set from Timer 4
