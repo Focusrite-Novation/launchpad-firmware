@@ -11,3 +11,5 @@ main/obj/Sonar Launchpad.elf.ld
 main/obj/Sonar Launchpad.map
 *.lst
 *.o
+Sonar Launchpad-Globals.Debug with RLink.xdb
+Sonar Launchpad-Globals.Standard.xdb
